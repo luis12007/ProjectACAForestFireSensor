@@ -9,6 +9,16 @@
             "projectName": "alpha",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-SentryAPIApplication<ProjectACAForestFireSensor>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.forestsentry.SentryAPI.SentryAPIApplication",
+            "projectName": "ProjectACAForestFireSensor",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
