@@ -35,7 +35,7 @@ public class MainController {
     @Autowired
     private RecordService recordService;
 
-    @PostMapping(path = "/Post", consumes = "application/json")
+    @PostMapping("/Post")
     public ResponseEntity<?> saveRecord(@RequestBody @Valid RecordDTO dto, BindingResult result){
         try{
             System.out.println("Entro a la mierda ---------------------");
@@ -104,7 +104,7 @@ public class MainController {
         }
     }
 
-    @PostMapping(path = "/Latest/Group", consumes = "multipart/form-data")
+    @PostMapping("/Latest/Group")
     public ResponseEntity<?> getLatestRecordsForGroup(@ModelAttribute @Valid RecordGroupRequestDTO dto, BindingResult result){
         try{
             if(result.hasErrors()){
