@@ -34,7 +34,7 @@ public class MainController {
     @Autowired
     private RecordService recordService;
 
-    @PostMapping("/Post")
+    @PostMapping("/Data/Post")
     public ResponseEntity<?> saveRecord(@ModelAttribute @Valid RecordDTO dto, BindingResult result){
         try{
             System.out.println("Entro a la mierda ---------------------");
