@@ -71,7 +71,7 @@ public class MainController {
         }
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("/ID/{id}")
     public ResponseEntity<?> getRecordById(@PathVariable(name = "id") UUID id){
         try{
             Record r = recordService.findById(id);
