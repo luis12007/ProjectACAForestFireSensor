@@ -38,6 +38,7 @@ public class MainController {
     @PostMapping(path = "/Post", consumes = "application/json")
     public ResponseEntity<?> saveRecord(@RequestBody @Valid RecordDTO dto, BindingResult result){
         try{
+            System.out.println("Entro a la mierda ---------------------");
             if(result.hasErrors()){
                 System.out.println(result.getAllErrors());
                 return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
@@ -50,6 +51,7 @@ public class MainController {
             }
         }
         catch(Exception e){
+            System.out.println("Entro a la mierda ---------------------");
             e.printStackTrace();
             System.out.println(e.getMessage());
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
