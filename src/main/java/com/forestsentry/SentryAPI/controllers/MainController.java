@@ -35,10 +35,11 @@ public class MainController {
     @Autowired
     private RecordService recordService;
 
-    @PostMapping(value = "/Post", consumes = "application/json")
+    @PostMapping(consumes = "application/json")
     public ResponseEntity<?> saveRecord(@RequestBody @Valid RecordDTO dto, BindingResult result){
         try{
             if(result.hasErrors()){
+                System.out.println(result.getAllErrors());
                 return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
             }
             if(recordService.save(dto)){
