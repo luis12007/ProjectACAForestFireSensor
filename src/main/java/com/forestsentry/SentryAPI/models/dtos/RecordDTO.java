@@ -7,17 +7,13 @@ import org.springframework.lang.Nullable;
 import com.forestsentry.SentryAPI.models.entities.Record;
 
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.jackson.Jacksonized;
 import jakarta.validation.constraints.NotNull;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-@Jacksonized
 public class RecordDTO {
     @NotNull
     private Float latitude;
