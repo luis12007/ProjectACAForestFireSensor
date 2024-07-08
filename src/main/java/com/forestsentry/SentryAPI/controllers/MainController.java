@@ -104,7 +104,7 @@ public class MainController {
         }
     }
 
-    @PostMapping("/Latest/Group")
+    @PostMapping(path = "/Latest/Group", consumes = "multipart/form-data")
     public ResponseEntity<?> getLatestRecordsForGroup(@ModelAttribute @Valid RecordGroupRequestDTO dto, BindingResult result){
         try{
             if(result.hasErrors()){
