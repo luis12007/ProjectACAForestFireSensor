@@ -36,13 +36,9 @@ public class MainController {
     private RecordService recordService;
 
     @PostMapping("/Post")
-    public ResponseEntity<?> saveRecord(@RequestBody @Valid RecordDTO dto, BindingResult result){
+    public ResponseEntity<?> saveRecord(@RequestBody RecordDTO dto){
         try{
             System.out.println("Entro a la mierda ---------------------");
-            if(result.hasErrors()){
-                System.out.println(result.getAllErrors());
-                return new ResponseEntity<>(result.getAllErrors(), HttpStatus.BAD_REQUEST);
-            }
             if(recordService.save(dto)){
                 return new ResponseEntity<>(HttpStatus.OK);
             }
